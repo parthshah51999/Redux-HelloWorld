@@ -1,13 +1,5 @@
-import React, { Component } from "react";
-import HelloWorld from "./HelloWorld";
+import ReactDom from 'react-dom';
+import React from 'react';
+import Main from './main';
 
-class App extends Component {
-  state = {
-    tech: "React"
-  };
-  render() {
-    return <HelloWorld tech={this.state.tech} />;
-  }
-}
-
-export default App;
+ReactDom.render(<Main />, document.getElementById('app'));
