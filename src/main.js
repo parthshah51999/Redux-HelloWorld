@@ -1,15 +1,9 @@
 import React from 'react';
 import HelloWorld from './HelloWorld'
+import store from './store'
 
 export default class Main extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      text: 'React',
-    }
-  }
-
   render() {
-      return <HelloWorld text = { this.state.text }/>;
+      return <HelloWorld text = { store.getState().text }/>;
   }
 }
